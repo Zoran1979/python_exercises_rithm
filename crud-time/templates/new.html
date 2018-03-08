@@ -1,0 +1,21 @@
+ {% extends "Base.Html" %}
+
+ {% block title%}
+    Add a Car
+ {% endblock %}
+
+ {% block content %}
+ <h2> Add a New Amazing Car</h2>
+    <form action="/cars" method="POST" >
+        <label for ="car_make">Make</label>
+        <input type="text" name="car_make" id="car_make">
+        <br>
+        <label for ="car_model">Model</label>
+        <input type="text" name="car_model" id="car_model">
+        <br>
+        <label for ="car_year">Year</label>
+        <input type="text" name="car_year" id="car_year">
+        <br>
+        <button > Add Amazing Car</button>
+    </form>
+ {% endblock %}

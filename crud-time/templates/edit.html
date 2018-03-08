@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}
+Edit Your Amazing car
+{% endblock %}
+
+{% block content %}
+<form action="{{url_for('show', id=car.id)}}?_method=PATCH" method="POST">
+    <label for ="car make"> Make:
+        <input type="text" name="car_make" id="car_make" value"{{ car.make}}">
+        <br>
+        <label for ="car model"> Model:    
+        <input type="text" name="car_model" id="car_model" value"{{ car.model}}">
+        <br>
+        <label for ="car year"> Year:    
+        <input type="text" name="car_year" id="car_year" value"{{ car.year}}">
+    </label>
+  <button>Submit Changes</button>
+</form>
+{% endblock %}
